@@ -15,7 +15,9 @@ func main() {
 	log.SetPrefix("greetings: ") // Prefix for the logger
 	log.SetFlags(0)              // Set flag to disable printing time, source file and line number
 
-	message, err := greetings.Hello("Ibrahim")
+	names := []string{"John", "Ayo", "Mack"}
+
+	message, err := greetings.Hellos(names)
 	if err != nil {
 		log.Fatal(err)
 	}
